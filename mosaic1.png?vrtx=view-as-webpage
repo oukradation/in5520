@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
+  
+
+   <meta charset="utf-8" >
+   
+
+   <meta name="format-detection" content="telephone=no">
+   <meta name="generator" content="Vortex" />
+
+
+     <title>mosaic1.png - IN5520 - Høst 2018 - Universitetet i Oslo</title>
+     <meta property="og:title" content="mosaic1.png - IN5520 - Høst 2018 - Universitetet i Oslo" />
+
+
+   
+  
+  
+  
+  
+
+  
+    
+
+    
+    
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@unioslo" />
+    <meta name="twitter:title" content="mosaic1.png" />
+
+    
+      <meta name="twitter:description" content="Les denne saken på UiOs nettsider." />
+    
+
+    
+
+    
+    
+      <meta name="twitter:url" content="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/mosaic1.png" />
+    
+  
+
+   
+  
+  
+  
+  
+
+  
+    
+    
+
+    <meta property="og:url" content="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/mosaic1.png" />
+    <meta property="og:type" content="website" />
+    
+
+    
+  
+
+
+    
+  
+  
+  
+  
+  
+  
+  
+
+  
+    
+      <link rel="shortcut icon" href="/vrtx/decorating/resources/dist/images/favicon.ico" >
+      <link rel="apple-touch-icon-precomposed" href="/vrtx/decorating/resources/dist/images/apple-touch-icon.png" >
+    
+   
+
+
+    
+  
+  
+  
+
+  <script><!--
+    var uioPageInfo = {};
+
+    uioPageInfo.readRestricted = false;
+
+    
+      
+      uioPageInfo.cloudAllowed = true;
+    
+
+    
+      uioPageInfo.authenticated = "anonymous";
+    
+  // -->
+  </script>
+
+  
+    <script src="https://www.uio.no/vrtx/__vrtx/app-services/marketing-consent-uio.js"></script>
+  
+
+
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <script><!--
+    if (/iPad|Android 3/i.test(navigator.userAgent)) {
+      var tabletVp = document.getElementById('viewport');
+      tabletVp.setAttribute("content", "width=1020, user-scalable=yes");
+    }
+    if (/googlebot/i.test(navigator.userAgent)) {
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var css = '@media only screen and (max-width: 16cm) and (orientation : portrait),' +
+                  '       only screen and (max-width: 19cm) and (orientation : landscape) { * { max-width: 420px; } }';
+        var head = document.getElementsByTagName('head')[0];
+        var s = document.createElement('style');
+        s.setAttribute('type', 'text/css');
+        if (s.styleSheet) {
+          s.styleSheet.cssText = css;
+        } else {
+          s.appendChild(document.createTextNode(css));
+        }
+        head.appendChild(s);
+      });
+    }
+  // -->
+  </script>
+
+  <link rel="stylesheet" media="all" href="/vrtx/decorating/resources/dist/src/css/style.css" >
+  
+    <link rel="stylesheet" media="only screen and (max-width: 16cm) and (orientation : portrait), only screen and (max-width: 19cm) and (orientation : landscape)" href="/vrtx/decorating/resources/dist/src/css/responsive.css" >
+  
+
+  <link rel="stylesheet" media="print" href="/vrtx/decorating/resources/dist/src/css/print.css" >
+
+  
+  
+
+  <script type='text/javascript' src='/vrtx/decorating/resources/dist/src/lib/jquery.min.js'></script>
+
+   
+     
+       <script src="//vrtx.uio.no/js/analytics/v2/uioGa.js"></script>
+     
+     <script src="//vrtx.uio.no/js/analytics/v2/www.uio.no/customTracker.js"></script>
+   
+
+
+    
+  
+      <script type="text/javascript" src="/vrtx/__vrtx/static-resources/jquery/include-jquery.js"></script>
+      <script type="text/javascript" src="/vrtx/__vrtx/static-resources/js/cross-doc-com-link.js"></script>
+      <script type="text/javascript" src="/vrtx/__vrtx/static-resources/js/iframe-view-media.js"></script>
+
+  </head>
+
+  
+    
+      <body class='www.uio.no not-for-ansatte faculty no '  id="vrtx-image-preview">
+    
+  
+  <!--stopindex-->
+
+
+     
+  
+  
+  
+  
+  
+  
+
+  <!-- Hidden navigation start -->
+  <ul id="hidnav">
+   
+     <li><a href="#globalnav">Hovednavigasjon (hopp)</a></li>
+   
+   <li><a href="#main">Hovedinnholdet (hopp)</a></li>
+   
+     <li><a href="#bottomnav">Temanavigasjon (hopp)</a></li>
+   
+   <li><a href="#footers">Kontaktinformasjon (hopp)</a></li>
+  </ul>
+  <!-- Hidden navigation end -->
+
+
+    <div id="head-wrapper">
+        
+          
+       
+        <div id="head">
+           
+
+           
+           <div class="uio-app-name" role="banner">
+                
+                  <a href="https://www.uio.no/" class="uio-seal">
+                    <span class="offscreen-screenreader">UiO</span>
+                  </a>
+                  <a href="https://www.uio.no/" class="uio-acronym georgia">UiO</a>
+                  <a href="https://www.uio.no/" class="uio-host uio-host-resp">Universitetet i Oslo</a>
+                
+
+                
+                  
+                    <a href="https://www.uio.no/" class="uio-host">Universitetet i Oslo</a>
+                  
+                
+
+                
+                  
+                
+
+                
+            </div>
+            
+
+            
+
+            
+            <div class="head-menu">
+              <ul>
+                
+                  
+                    <li class="for-ansatte"><a href="https://for-ansatte.uio.no/index.html?lang=no">For ansatte</a></li>
+                    
+                    
+                      <li class="language"><a href='https://www.uio.no/english/'>English website</a></li>
+                    
+                  
+                
+                </ul>
+                
+
+
+            </div>
+
+            <div class="header-search">
+              <form method="get" action='/'>
+                <fieldset>
+                  <label for="search-string" class="search-string-label">Søk i nettsidene til UiO</label>
+                  <input type="hidden" name="vrtx" value="searchuio">
+                  <input id="search-string" type="text" name="query" placeholder="Søk i nettsidene til UiO">
+                  <button type="submit">Søk</button>
+                </fieldset>
+              </form>
+            </div>
+            
+
+            
+        </div>
+
+        
+
+    
+
+<div id="menu-wrapper" role="navigation">
+           <ul class="menu">
+            <li><a href="#" class="toggle-navigation">
+                    <span class="icon"></span>
+                    <span class="text">Meny</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="toggle-search">
+                    <span class="icon"></span>
+                    <span class="text">Søk</span>
+                </a>
+            </li>
+        </ul>
+       </div>
+
+        <!-- Global navigation start -->
+	<div id="globalnav" aria-labelledby="globalnav-title">
+          <span id="globalnav-title" style="display: none">Hovednavigasjon</span>
+          
+          
+            
+                <ul class="vrtx-tab-menu">
+    <li class="root-folder parent-folder">
+  <a href="https://www.uio.no/">Forsiden</a>
+    </li>
+    <li class="forskning">
+  <a href="https://www.uio.no/forskning/">Forskning</a>
+    </li>
+    <li class="vrtx-active-item studier vrtx-current-item" aria-current="page">
+  <a href="https://www.uio.no/studier/">Studier</a>
+    </li>
+    <li class="livet-rundt-studiene">
+  <a href="https://www.uio.no/livet-rundt-studiene/">Livet rundt studiene</a>
+    </li>
+    <li class="tjenester">
+  <a href="https://www.uio.no/tjenester/">Tjenester og verktøy</a>
+    </li>
+    <li class="om">
+  <a href="https://www.uio.no/om/">Om UiO</a>
+    </li>
+    <li class="personer">
+  <a href="https://www.uio.no/personer/">Personer</a>
+    </li>
+  </ul>
+
+
+            
+          
+          
+        </div>
+	<!-- Global navigation end -->
+    </div>
+
+       <div class="menu-search">
+          <form method="get" action="/">
+            <input type="hidden" name="vrtx" value="searchuio">
+            <label for="search-string-responsive" class="search-string-label">Søk i nettsidene til UiO</label>
+            <input id="search-string-responsive" type="text" name="query" placeholder="Søk i nettsidene til UiO">
+            <button type="submit">Søk</button>
+          </form>
+        </div>
+
+  <div class="grid-container uio-info-message alert">
+  <div class="row">
+  <div class="col-1-1">
+
+  
+
+  
+  
+    
+       &nbsp;
+    
+  
+  
+  
+
+  </div>
+  </div>
+  </div>
+
+   <div id="main" role="main">
+     <div id="left-main" role="navigation" aria-labelledby="left-main-title">
+       <span id="left-main-title" style="display: none">Undernavigasjon</span>
+       
+         
+             <ul class="vrtx-breadcrumb-menu">
+            <li class="vrtx-ancestor"> <a href="https://www.uio.no/studier"><span>Studier</span></a></li>
+            <li class="vrtx-ancestor"> <a href="https://www.uio.no/studier/emner"><span>Emner</span></a></li>
+            <li class="vrtx-ancestor"> <a href="https://www.uio.no/studier/emner/matnat"><span>Matematikk og naturvitenskap</span></a></li>
+            <li class="vrtx-ancestor"> <a href="https://www.uio.no/studier/emner/matnat/ifi"><span>Informatikk</span></a></li>
+            <li class="vrtx-ancestor"> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520"><span>IN5520</span></a></li>
+            <li class="vrtx-ancestor"> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18"><span>Høst 2018</span></a></li>
+            <li class="vrtx-parent" ><a class="vrtx-marked" href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale" aria-current="location"><span>Undervisningsmateriale</span></a>
+
+      <ul>
+          <li class="vrtx-child"><a  href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week2/"><span>Week2</span></a></li>
+          <li class="vrtx-child"><a  href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week3/"><span>week3</span></a></li>
+          <li class="vrtx-child"><a  href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week4/"><span>week4</span></a></li>
+          <li class="vrtx-child"><a  href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week5/"><span>week5</span></a></li>
+          <li class="vrtx-child"><a  href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week7/"><span>week7</span></a></li>
+      </ul>
+
+    </li>
+
+  </ul>
+
+         
+       
+     </div>
+     <div id="right-main" class="uio-main">
+       
+
+           
+            
+              <div class="vrtx-context-box vrtx-context-box-linked">
+                <a href="/studier/emner/matnat/ifi/IN5520/h18/">
+                  
+                    IN5520 - Høst 2018
+                  
+                </a>
+              </div>
+            
+
+       <!--startindex-->
+       
+
+  
+  
+  <a href="/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/mosaic1.png"><img src="/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/mosaic1.png" alt=""/></a>
+
+
+
+<h2>Kildefil</h2>
+<p id="vrtx-image-view-link">
+  <a href="/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/mosaic1.png">mosaic1.png</a>
+    &nbsp;(512 x 512 px)
+</p>
+
+
+
+  <h2>Bruk av bildet</h2>
+  <p><a href="https://www.uio.no/om/regelverk/opphavsrett/">Opphavsrett p&aring; UiOs nettsider</a></p>
+
+
+       <!--stopindex-->
+     </div>
+   </div>
+
+   <div id="bottomnav" role="navigation">
+     
+
+     <div id="breadcrumb-container">
+       
+         <div id="vrtx-breadcrumb-start" class="breadcrumb">
+           
+             <span class="vrtx-uio"><a href="https://www.uio.no/">UiO</a> <span class="vrtx-breadcrumb-delimiter">&gt;</span></span>
+           
+           
+             <span class="vrtx-faculty"><a href="https://www.uio.no/">Universitetet i Oslo</a> <span class="vrtx-breadcrumb-delimiter">&gt;</span></span>
+           
+         </div>
+         
+           
+
+
+
+
+
+
+  <div id="vrtx-breadcrumb-wrapper">
+    <div id="vrtx-breadcrumb" class="breadcrumb">
+            <span class="vrtx-breadcrumb-level vrtx-breadcrumb-level-2">
+            <a href="https://www.uio.no/studier">Studier</a>
+      	  <span class="vrtx-breadcrumb-delimiter">&gt;</span>
+        </span>
+    </div>
+  </div>
+
+         
+
+       
+       </div>
+
+       <div id="bottom-menu">
+         
+                    
+          <div class="vrtx-subfolder-menu vrtx-subfolder-menu-sets-14">
+    <div class="vrtx-group-1">
+  	
+  <ul class="resultset-1">
+      <li>      <a href="https://www.uio.no/studier/program/">Studieprogrammer</a>
+</li>
+  </ul>
+  	
+  <ul class="resultset-2">
+      <li>    <a href="https://www.uio.no/studier/opptak/">Opptak</a>
+  <ul>
+      <li>
+      <a href="https://www.uio.no/studier/opptak/so/">Søkje på grunnstudium</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/opptak/enkeltemner/">Enkeltemne</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/opptak/gsk/">Generell studiekompetanse</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/opptak/realkompetanse/">Realkompetanse</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/opptak/spesielle-krav/">Spesielle opptakskrav</a>
+      </li>
+    
+      <li class="vrtx-more">
+        <a href="https://www.uio.no/studier/opptak/">Mer ...</a>
+      </li>
+  </ul>
+</li>
+  </ul>
+  	
+  <ul class="resultset-3">
+      <li>      <a href="https://www.uio.no/studier/studiestart/">Studiestart</a>
+</li>
+  </ul>
+  	
+  <ul class="resultset-4">
+      <li>    <a href="https://www.uio.no/studier/emner/">Emner</a>
+  <ul>
+      <li>
+      <a href="https://www.uio.no/studier/emner/hf/">Humanistiske fag</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emner/jus/">Jus</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emner/matnat/">Matematikk og naturvitenskap</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emner/medisin/">Medisin</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emner/norskkurs/">Norskkurs</a>
+      </li>
+    
+      <li class="vrtx-more">
+        <a href="https://www.uio.no/studier/emner/">Mer ...</a>
+      </li>
+  </ul>
+</li>
+  </ul>
+  	
+  <ul class="resultset-5">
+      <li>      <a href="https://www.uio.no/studier/registrering/">Registrering, frister og studentkort</a>
+</li>
+  </ul>
+  	
+  <ul class="resultset-6">
+      <li>    <a href="https://www.uio.no/studier/tilrettelegging-permisjon/">Tilrettelegging og permisjon</a>
+  <ul>
+      <li>
+      <a href="https://www.uio.no/studier/tilrettelegging-permisjon/permisjon/">Permisjon, nedsatt studieprogresjon og utsatt studiestart</a>
+      </li>
+    
+  </ul>
+</li>
+  </ul>
+      </div>
+    <div class="vrtx-group-2">
+  	
+  <ul class="resultset-7">
+      <li>      <a href="https://www.uio.no/studier/evu/">Etter- og videreutdanning</a>
+</li>
+  </ul>
+  	
+  <ul class="resultset-8">
+      <li>      <a href="https://www.uio.no/studier/bli-student/">Bli UiO-student</a>
+</li>
+  </ul>
+  	
+  <ul class="resultset-9">
+      <li>      <a href="https://www.uio.no/studier/eksamen/">Eksamen</a>
+</li>
+  </ul>
+  	
+  <ul class="resultset-10">
+      <li>    <a href="https://www.uio.no/studier/utveksling/">Utveksling</a>
+  <ul>
+      <li>
+      <a href="https://www.uio.no/studier/utveksling/avtaler/">Alle utvekslingsavtaler</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/utveksling/avtaletyper/">Avtaletyper</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/utveksling/praktisk/">Søknadsprosessen</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/utveksling/intervjuer/">Studentintervjuer</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/utveksling/sommerskoler/">Sommerskoler</a>
+      </li>
+    
+      <li class="vrtx-more">
+        <a href="https://www.uio.no/studier/utveksling/">Mer ...</a>
+      </li>
+  </ul>
+</li>
+  </ul>
+  	
+  <ul class="resultset-11">
+      <li>    <a href="https://www.uio.no/studier/om/">Om studier</a>
+  <ul>
+      <li>
+      <a href="https://www.uio.no/studier/om/kalender/">Studieåret</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/om/studier-og-grader/">Studiestruktur og gradar</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/om/laringsmiljo/">Læringsmiljø</a>
+      </li>
+    
+  </ul>
+</li>
+  </ul>
+  	
+  <ul class="resultset-12">
+      <li>    <a href="https://www.uio.no/studier/emnegrupper/">Emnegrupper</a>
+  <ul>
+      <li>
+      <a href="https://www.uio.no/studier/emnegrupper/hf/">Humanistiske fag</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emnegrupper/jus/">Jus</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emnegrupper/matnat/">Matematikk og naturvitenskap</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emnegrupper/medisin/">Medisin</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/emnegrupper/sv/">Samfunnsvitenskap</a>
+      </li>
+    
+      <li class="vrtx-more">
+        <a href="https://www.uio.no/studier/emnegrupper/">Mer ...</a>
+      </li>
+  </ul>
+</li>
+  </ul>
+      </div>
+    <div class="vrtx-group-3">
+  	
+  <ul class="resultset-13">
+      <li>      <a href="https://www.uio.no/studier/alumni/">Alumni</a>
+</li>
+  </ul>
+  	
+  <ul class="resultset-14">
+      <li>    <a href="https://www.uio.no/studier/kontakt/">Kontakt oss</a>
+  <ul>
+      <li>
+      <a href="https://www.uio.no/studier/kontakt/knutepunktet/">Knutepunktet</a>
+      </li>
+      <li>
+      <a href="https://www.uio.no/studier/kontakt/si-fra/">Si fra om læringsmiljøet</a>
+      </li>
+    
+  </ul>
+</li>
+  </ul>
+    </div>
+        </div>
+
+
+
+         
+       </div>
+     
+     
+       
+         <div id="bottom-subfolder-menu">
+                    
+          <div class="vrtx-subfolder-menu vrtx-subfolder-menu-sets-1">
+  	
+  <ul class="resultset-1">
+      <li>      <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week2/">Week2</a>
+</li>
+      <li>      <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week3/">week3</a>
+</li>
+      <li>      <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week4/">week4</a>
+</li>
+      <li>      <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week5/">week5</a>
+</li>
+      <li>      <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/week7/">week7</a>
+</li>
+  </ul>
+        </div>
+
+
+
+         </div>
+       
+     
+   </div>
+
+
+
+
+    <!-- Page footer start -->
+    <div id="footer-wrapper" class="grid-container ">
+       <div id="footers" class="row">
+            <div class="col-3-5 vcard">
+            
+              
+                
+                  <div class="col-1-3 adr">
+  <div class="content">
+    <h2 class="menu-label">Kontakt oss</h2>
+        <p><a href="/om/kontaktinformasjon/">Kontaktpunkter UiO</a></p>
+  </div>
+</div>
+<div class="col-1-3 adr">
+  <div class="content">
+    <h2 class="menu-label">Adresse</h2>
+    <p><span class="post-office-box">Universitetet i Oslo</span><br/>
+    <span class="post-office-box">Boks 1072 Blindern</span><br/>
+    <span class="postal-code">0316 Oslo</span></p>
+  </div>
+</div>
+<div class="col-1-3">
+  <div class="content">
+    <h2 class="menu-label">Nødnummer</h2>
+    <p>Ved brann, ulykker og alvorlige hendelser ring <br/><span class="tel">22 85 66 66</span></p>
+  </div>
+</div>
+                
+              
+            
+            </div>
+            <div class="col-2-5 responsible-login">
+             <div class="content">
+                <span class="menu-label">Ansvarlig for denne siden</span>
+                <p>
+                  
+                    <a href="mailto:studieredaktor@admin.uio.no">studieredaktor@admin.uio.no</a>
+                  
+                </p>
+                
+  
+  
+  
+    <!-- begin view dropdown js -->
+    <script type="text/javascript" src="/vrtx/__vrtx/static-resources/js/view-dropdown.js"></script>
+    <!-- end view dropdown js -->
+  
+  <div class="vrtx-login-manage-component vrtx-dropdown-component vrtx-dropdown-component-toggled">
+      <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/mosaic1.png?vrtx=view-as-webpage&amp;authTarget" class="vrtx-login-manage-title-link vrtx-dropdown-title-link">Logg inn</a>
+      <a href="javascript:void(0)" class="vrtx-login-manage-link vrtx-dropdown-link"><span class="offscreen-screenreader">Logg ut meny</span></a>
+    <div class="vrtx-login-manage-wrapper vrtx-dropdown-wrapper">
+      <div class="vrtx-login-manage-wrapper-inner vrtx-dropdown-wrapper-inner">
+      <ul>
+          
+          <li class="vrtx-dropdown-first vrtx-dropdown-last">
+            
+              <a href="https://www-adm.uio.no/studier/emner/matnat/ifi/IN5520/h18/undervisningsmateriale/mosaic1.png?vrtx=admin" class="vrtx-login-manage-admin">
+Administrer dette dokumentet              </a>
+          </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+    
+
+
+              </div>
+            </div>
+        </div>
+    </div>
+
+    
+  
+  
+  
+  
+  
+  
+  
+
+  <script src='/vrtx/decorating/resources/dist/src/js/uio2.js'></script>
+
+  
+  
+
+</body>
+</html>
