@@ -165,15 +165,19 @@ ig=double(rgb2gray(i));
 
 figure
 imshow(ig,[min(min(ig)) max(max(ig))])
-
+%%
 h1=fspecial('sobel');
 h2=h1';
 igh=imfilter(ig,h1);
 igv=imfilter(ig,h2);
 igs=abs(igh)+abs(igv);
+imshow(igh,[min(min(igh)), max(max(igh))])
+%%
+imshow(igv,[min(min(igv)), max(max(igv))])
+%%
 figure
 imshow(igs,[min(min(igs)) max(max(igs))])
-
+%%
 igsT=igs>170;
 figure
 imshow(igsT)
