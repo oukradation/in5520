@@ -34,26 +34,92 @@ def slidingWindow(img, grayscale=16, winSize=(31,31)):
 
     return res
 
-def GLCM(win, grayscale=16):
+def GLCM(win, d, theta='0', grayscale=16):
+    assert theta in ['-45','0','45','90'], 'unsupported theta'
     coMat = np.zeros([grayscale,grayscale],np.uint16)
 
-    d = 1
-    # find pairs with theta = 0 and d = 1
-    for i in range(win.shape[0]):
-        for j in range(win.shape[1]-d):
-            coMat[win[i][j]][win[i][j+d]] += 1
-    return coMat
+    if theta == '0':
+        dx = 1*d
+        dy = 0 
+    elif theta == '45':
+        dx = 1*d
+        dy = 1*d
+    elif theta == '90':
+        dx = 0
+        dy = 1*d
+    else:
+        dx = 1*d
+        dy = 1*d
+        # mirror
+        win = np.flip(win[:],axis=1)
 
+    # find pairs with theta = 0 and d = 1
+    for i in range(win.shape[0]-dy):
+        for j in range(win.shape[1]-dx):
+            coMat[win[i][j]][win[i+dy][j+dx]] += 1
+
+    res = coMat + np.transpose(coMat)
+    #res = res/np.max(res)
+    res = res/(win.shape[0]*win.shape[1])
+
+    return res
+
+def IDM(coMat):
+    res = 0
+    for i in range(coMat.shape[0]):
+        for j in range(coMat.shape[1]):
+            res += 1/(1+(i-j)**2) * coMat[i,j]
+    return res
+
+def inertia(coMat):
+    res = 0
+    for i in range(coMat.shape[0]):
+        for j in range(coMat.shape[1]):
+            res += (i-j)**2 * coMat[i,j]
+    return res
+
+def shade(coMat):
+    res = 0
+    u_x = ux(coMat)
+    u_y = uy(coMat)
+
+    for i in range(coMat.shape[0]):
+        for j in range(coMat.shape[1]):
+            res += (i + j - u_x - u_y)**3 * coMat[i,j] 
+    return res
+            
+def ux(img):
+    res = 0
+    for i in range(img.shape[0]):
+        res += i*np.sum(img[i])
+    return res
+
+def uy(img):
+    img = np.transpose(img[:])
+    res = 0
+    for i in range(img.shape[0]):
+        res += i*np.sum(img[i])
+    return res
 
 
 img = plt.imread('mosaic1.png')
 tex = part_texture(img)
 
+win = 31
 for i in range(4):
     q = quantize(tex[i])
-    g = GLCM(q[:31,:31])
+    g = GLCM(q[:win,:win],3,'-45')
+
+    assert g.all()==np.transpose(g).all(), 'GLCM not symmetrical'
+
+    print(i,'IDM\t',IDM(g))
+    print(i,'inertia\t',inertia(g))
+    print(i,'shade\t',shade(g))
+    print('')
+
     plt.subplot(2,4,i+1)
     plt.imshow(g)
     plt.subplot(2,4,i+5)
-    plt.imshow(tex[i][:31,:31])
+    plt.imshow(tex[i][:win,:win])
+
 plt.show()
