@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('agg')
+import sys
 import numpy as np
 from matplotlib import pyplot as plt
 
@@ -22,16 +25,16 @@ def padding(img, winSize=(31,31)):
             winSize[1]//2:winSize[1]//2+img.shape[1]] = img
     return padded
 
-def slidingWindow(img, grayscale=16, winSize=(31,31)):
+def slidingWindow(img,d,theta,featFunc,winSize=(31,31)):
     # padding image
     padded = padding(img, winSize)
     res = np.zeros(img.shape)
-    #res2 = zeros(img.shape)
 
     for i in range(img.shape[0]):
         for j in range(img.shape[1]):
             win = padded[i:i+winSize[0],j:j+winSize[1]]
-
+            coMat = GLCM(win,d,theta)
+            res[i,j] = featFunc(coMat)
     return res
 
 def GLCM(win, d, theta='0', grayscale=16):
@@ -58,11 +61,20 @@ def GLCM(win, d, theta='0', grayscale=16):
         for j in range(win.shape[1]-dx):
             coMat[win[i][j]][win[i+dy][j+dx]] += 1
 
+    # symmetrical glcm
     res = coMat + np.transpose(coMat)
-    #res = res/np.max(res)
-    res = res/(win.shape[0]*win.shape[1])
+    # normalize by number of pixel pair
+    w = (win.shape[0]-dx)*(win.shape[1]-dy)
+    res = res/w
 
     return res
+
+def isoGLCM(win,d,grayscale=16):
+    theta = ['-45','0','45','90']
+    coMat = np.zeros([grayscale,grayscale],np.float)
+    for t in theta:
+        coMat += GLCM(win,d,t)
+    return coMat/4
 
 def IDM(coMat):
     res = 0
@@ -80,12 +92,13 @@ def inertia(coMat):
 
 def shade(coMat):
     res = 0
-    u_x = ux(coMat)
-    u_y = uy(coMat)
 
+    # ux and uy same for symmetrical GLCM
+    u = ux(coMat)
+    
     for i in range(coMat.shape[0]):
         for j in range(coMat.shape[1]):
-            res += (i + j - u_x - u_y)**3 * coMat[i,j] 
+            res += (i + j - 2*u)**3 * coMat[i,j] 
     return res
             
 def ux(img):
@@ -102,24 +115,40 @@ def uy(img):
     return res
 
 
+
 img = plt.imread('mosaic1.png')
-tex = part_texture(img)
+q = quantize(img)
 
-win = 31
-for i in range(4):
-    q = quantize(tex[i])
-    g = GLCM(q[:win,:win],3,'-45')
+d = int(sys.argv[1])
+theta = sys.argv[2]
+win = int(sys.argv[3])
+func = sys.argv[4]
 
-    assert g.all()==np.transpose(g).all(), 'GLCM not symmetrical'
+print('Saving to %s_d_%d_th_%s_win_%d.png'%(func,d,theta,win))
 
-    print(i,'IDM\t',IDM(g))
-    print(i,'inertia\t',inertia(g))
-    print(i,'shade\t',shade(g))
-    print('')
+featureMap = slidingWindow(q,d,theta,eval(func),(win,win))
+plt.imshow(featureMap)
+plt.savefig('../%s_d_%d_th_%s_win_%d.png'%(func,d,theta,win))
 
-    plt.subplot(2,4,i+1)
-    plt.imshow(g)
-    plt.subplot(2,4,i+5)
-    plt.imshow(tex[i][:win,:win])
 
-plt.show()
+#tex = part_texture(img)
+#
+#d = 1
+#theta = '-45'
+#
+#win = 31
+#
+#for i in range(4):
+#    q = quantize(tex[i])
+#    g = GLCM(q[:win,:win],d,theta)
+#
+#    assert g.all()==np.transpose(g).all(), 'GLCM not symmetrical'
+#
+#    print(i,'IDM : %.02f \t Inertia : %.02f, \t Shade : %.02f'%(IDM(g),inertia(g),shade(g)))
+#    
+#    plt.subplot(2,4,i+1)
+#    plt.imshow(g)
+#    plt.subplot(2,4,i+5)
+#    plt.imshow(tex[i][:win,:win])
+#
+#plt.savefig('../d_%d_th_%s_win_%d.png'%(d,theta,win))
