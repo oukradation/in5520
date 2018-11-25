@@ -123,51 +123,83 @@ def uy(img):
         res += i*np.sum(img[i])
     return res
 
+# Visualize GLCM for a texture patch size of given window size
+def visualizeGLCM(filename, d,theta,win,iso=False):
+    img = plt.imread(filename)
+    q = quantize(img)
+    tex = part_texture(img)
+    
+    for i in range(4):
+        q = quantize(tex[i])
+        if iso:
+            g = GLCM(q[:win,:win],d,theta)
+        else:
+            g = isoGLCM(q[:win,:win],d)
+    
+    
+        print(i,'IDM : %.02f \t Inertia : %.02f, \t Shade : %.02f'%(IDM(g),inertia(g),shade(g)))
+        plt.subplot(1,2,1)
+        plt.imshow(g,interpolation='none',cmap=plt.get_cmap('Spectral'))
+        plt.title('d:%d theta:%s win:%d'%(d,theta,win))
+        plt.colorbar()
+        plt.subplot(1,2,2)
+        plt.imshow(tex[i][:win,:win],cmap=plt.get_cmap('gray'))
+        plt.savefig('../%s%d_d_%d_th_%s_win_%d.png'%(filename,i+1,d,theta,win))
+        plt.clf()
 
+# take a numpy file which contains feature map 
+#   apply global threshold of given range <lower,upper>
+#   create mask and outputs image to a file
+def globalThreshold(featureFile, lower, upper, mosaic, fromFile=False):
+    if fromFile:
+        featureMap = np.load(featureFile)
+    else:
+        featureMap = featureFile
 
-#imgNum = sys.argv[1]
-#d = int(sys.argv[2])
-#theta = sys.argv[3]
-#win = int(sys.argv[4])
-#func = sys.argv[5]
-#iso = int(sys.argv[6])
-#
-#filename = '../p%s_%s_d_%d_th_%s_win_%d_iso_%d'%(imgNum,func,d,theta,win,iso)
-#
-#print'Saving to ', filename
-#
-#img = plt.imread('mosaic%s.png'%imgNum)
-#q = quantize(img)
-#
-#featureMap = slidingWindow(q,d,theta,iso,eval(func),(win,win))
-#plt.imshow(featureMap, cmap=plt.get_cmap('Spectral'))
-#plt.colorbar()
-#plt.savefig('%s.png'%filename)
-#np.save('%s.npy'%filename, featureMap)
-#
-
-filename = 'mosaic2.png'
-img = plt.imread(filename)
-q = quantize(img)
-tex = part_texture(img)
-
-d = 3
-theta = 'iso'
-
-win = 31
-
-for i in range(4):
-    q = quantize(tex[i])
-    #g = GLCM(q[:win,:win],d,theta)
-    g = isoGLCM(q[:win,:win],d)
-
-
-    print(i,'IDM : %.02f \t Inertia : %.02f, \t Shade : %.02f'%(IDM(g),inertia(g),shade(g)))
-    plt.subplot(1,2,1)
-    plt.imshow(g,interpolation='none',cmap=plt.get_cmap('Spectral'))
-    plt.title('d:%d theta:%s win:%d'%(d,theta,win))
+    img = plt.imread('mosaic%s.png'%mosaic)
+    mask = (featureMap < float(lower))*(featureMap > float(upper))
+    plt.subplot(131)
+    plt.imshow(featureMap, cmap=plt.get_cmap('Spectral'))
+    plt.subplot(132)
+    plt.imshow(mask,cmap=plt.get_cmap('gray'))
+    title = 'Threshold : %.02f < T < %.02f'%(float(lower),float(upper))
+    plt.title(title)
+    plt.subplot(133)
+    plt.imshow(img*mask,cmap=plt.get_cmap('gray'))
+    plt.show()
+    plt.savefig('%s%s.png'%(mosaic+featureFile[:-4]+lower+upper,title))
+    
+# create feature map for given parameter
+# outputs feature map image and numpy file containing the feature map
+def createFeatureMap(imgNum, d, theta, win, func, iso):
+    filename = 'p%s_%s_d_%d_th_%s_win_%d_iso_%d'%(imgNum,func,d,theta,win,iso)
+    
+    print'Saving to ', filename
+    
+    img = plt.imread('mosaic%s.png'%imgNum)
+    q = quantize(img)
+    
+    featureMap = slidingWindow(q,d,theta,iso,eval(func),(win,win))
+    plt.imshow(featureMap, cmap=plt.get_cmap('Spectral'))
     plt.colorbar()
-    plt.subplot(1,2,2)
-    plt.imshow(tex[i][:win,:win],cmap=plt.get_cmap('gray'))
-    plt.savefig('../%s%d_d_%d_th_%s_win_%d.png'%(filename,i+1,d,theta,win))
-    plt.clf()
+    plt.savefig('%s.png'%filename)
+    np.save('%s.npy'%filename, featureMap)
+    
+    return featureMap
+
+if __name__ == '__main__':
+    if len(sys.argv) < 6:
+        print 'Argument\n\t img d theta win featFunc iso'
+        sys.exit()
+    
+    imgNum = sys.argv[1]
+    d = int(sys.argv[2])
+    theta = sys.argv[3]
+    win = int(sys.argv[4])
+    func = sys.argv[5]
+    iso = int(sys.argv[6])
+
+    featureMap = createFeatureMap(imgNum, d, theta, win, func, iso)
+    globalThreshold(featureMap, 0, 1.5, imgNum)
+
+        
